@@ -1,14 +1,58 @@
-<!-- dashboard.component.html -->
-<div class="dashboard-container">
-    <header class="navbar">
-      <button (click)="navigateTo('login')">Login</button>
-      <button (click)="navigateTo('about-us')">About Us</button>
-    </header>
-  
-    <!-- Add your dashboard content here -->
-    <div class="dashboard-content">
-      <!-- Your job seeker platform content goes here -->
-      Welcome to WorkWave Job Seeker Dashboard!
-    </div>
-  </div>
-  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/workwavalogo.png" type="image/x-icon" />
+    <title>Workwave</title>
+    <link rel="stylesheet" href="dashboard.component.css"/> 
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta 
+    name="keywords"
+    content="HTML,CSS,JAVASCRIPT"
+    />
+    <meta
+     property="og:description"
+     content="A JOB PLATFORM."
+    />
+    <meta property="og:image" content=""/>
+    <meta property="type" content="website"/>
+    <meta property="og:type" content="website"/>
+    <meta name="theme-color" content="#A9A9A9"/>
+</head>
+<body>
+    <!--Navbar- section-->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="#" id="website_logo"><b>WorkWave</b></a>
+            <div class="toggle" id="js_menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="website_menu">
+                <li class="navbar_menu">
+                    <a href="about/" class="basic_home">About </a>
+                </li>
+                <li class="navbar_button">
+                        <p>Jobs</p>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Header-section-->
+    <div class="header">
+        <div class="header_main">
+            <div class="content_header">
+                <h1>WELCOME TO</h1>
+                <h2>WorkWave</h2>
+                <p>At Workwave, we assist people in connecting their passion with their profession and bridge talents to opportunities.
+                </p>
+            </div>
+            <div class="image_official">
+                <img src="/assets/selection.png" id="code review"/><img>
+            </div>
+        </div>
+    </div> 
