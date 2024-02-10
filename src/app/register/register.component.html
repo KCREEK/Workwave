@@ -1,1 +1,81 @@
-<p>register works!</p>
+<!-- <div class="registration-container">
+    <h2>Create Your Account</h2>
+    <form (submit)="onSubmit($event)">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" [(ngModel)]="user.username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" [(ngModel)]="user.email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" [(ngModel)]="user.password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" [(ngModel)]="user.confirmPassword" required>
+      </div>
+      <button type="submit">Register</button>
+    </form>
+  </div>
+   -->
+
+   <div class="registration-container">
+    <div class="header">
+      <h1>Welcome to WorkWave!</h1>
+      <p>Register as:</p>
+      <button type="button" class="active" (click)="selectRole('job-seeker')">Job-Seeker</button>
+      <button type="button" (click)="selectRole('job-setter')">Job-Setter</button>
+    </div>
+  
+    <form *ngIf="selectedRole === 'job-seeker'" [formGroup]="seekerForm" (ngSubmit)="registerSeeker()">
+      <div class="form-group">
+        <label for="seeker-name">Full Name:</label>
+        <input type="text" id="seeker-name" formControlName="name" required>
+      </div>
+      <div class="form-group">
+        <label for="seeker-email">Email Address:</label>
+        <input type="email" id="seeker-email" formControlName="email" required>
+      </div>
+      <div class="form-group">
+        <label for="seeker-password">Password:</label>
+        <input type="password" id="seeker-password" formControlName="password" required>
+      </div>
+      <div class="form-group">
+        <label for="seeker-skills">Skills (comma-separated):</label>
+        <input type="text" id="seeker-skills" formControlName="skills">
+      </div>
+      <div class="form-group">
+        <label for="seeker-experience">Experience (years):</label>
+        <input type="number" id="seeker-experience" formControlName="experience">
+      </div>
+      <button type="submit" class="primary-btn">Register as Job-Seeker</button>
+    </form>
+  
+    <form *ngIf="selectedRole === 'job-setter'" [formGroup]="setterForm" (ngSubmit)="registerSetter()">
+      <div class="form-group">
+        <label for="setter-company">Company Name:</label>
+        <input type="text" id="setter-company" formControlName="company" required>
+      </div>
+      <div class="form-group">
+        <label for="setter-description">Company Description:</label>
+        <textarea id="setter-description" formControlName="description" rows="5"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="setter-email">Email Address:</label>
+        <input type="email" id="setter-email" formControlName="email" required>
+      </div>
+      <div class="form-group">
+        <label for="setter-password">Password:</label>
+        <input type="password" id="setter-password" formControlName="password" required>
+      </div>
+      <button type="submit" class="primary-btn">Register as Job Setter</button>
+    </form>
+  
+    <div class="error-message" *ngIf="errorMessage">
+      {{ errorMessage }}
+    </div>
+  </div>
+  
