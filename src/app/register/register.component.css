@@ -5,17 +5,61 @@
     justify-content: center;
     min-height: 100vh;
     background-color: #f2f2f2;
-    /* Light mode background */
     font-family: sans-serif;
+    padding-top: 2px;
+    width: 100%;
 }
 
+.navbar{
+    background: #f1eff4;
+    height: var(--navL);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    width: 100vw;
+    z-index: 999;
+  }
+  
+  .navbar_container{
+    display: flex;
+    justify-content: space-between;
+    height:100%; width: 100%;
+    z-index: 1;
+    margin:0 auto;
+    padding:0 50px;
+  }
+  
+  #website_logo{
+    cursor:pointer;
+    text-decoration: none;
+    background-color: #141252;
+    background-image:linear-gradient(to top, #68a3da 0%,#321a92);
+    background-size:100%;
+    -webkit-background-clip:text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    font-size: 40px;
+    align-items: center;
+  }
+  
+  #website_logo > b {
+    font-size: var(--fs);
+  }
+  
 .header {
     margin-bottom: 20px;
 }
 
+.header h1{
+    font-size: 30px;
+}
+
 button {
     border: none;
-    background-color: #4CAF50;
+    background-color: #c346d4;
     /* Green for active button */
     color: white;
     padding: 10px 20px;
@@ -25,12 +69,13 @@ button {
 }
 
 .active {
-    background-color: #2e8b57;
+    background-color: #c346d4;
     /* Darker green for active button */
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+
 }
 
 label {
@@ -42,4 +87,9 @@ input,
 textarea {
     border: 1px solid #ccc;
     padding: 10px
+}
+
+.form-group input,
+.form-group textarea {
+    font-size: 16px;
 }
