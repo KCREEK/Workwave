@@ -1,16 +1,19 @@
-<div class="login-container">
+<body>
+  <div class="login-container">
     <h1>Login to WorkWave</h1>
-  
+
     <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-  
+
     <form (ngSubmit)="login()">
       <div class="form-group">
         <label for="username">Username or Email:</label>
-        <input type="text" id="username" name="username" [(ngModel)]="username" (ngModelChange)="onRememberMeChange($event)" required>
+        <input type="text" id="username" name="username" [(ngModel)]="username"
+          (ngModelChange)="onRememberMeChange($event)" required>
       </div>
       <div class="form-group">
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" [(ngModel)]="password" (ngModelChange)="onRememberMeChange($event)" required>
+        <input type="password" id="password" name="password" [(ngModel)]="password"
+          (ngModelChange)="onRememberMeChange($event)" required>
       </div>
       <div class="form-group">
         <input type="checkbox" id="remember-me" name="remember-me" [(ngModel)]="rememberMe">
@@ -18,12 +21,13 @@
       </div>
       <button type="submit" class="primary-btn">Login</button>
     </form>
-  
+
     <a href="#">Forgot password?</a>
-  
+
     <div class="social-login">
       <button class="social-btn"><i class="fab fa-facebook"></i> Login with Facebook</button>
       <button class="social-btn"><i class="fab fa-google"></i> Login with Google</button>
     </div>
   </div>
+</body>
   
